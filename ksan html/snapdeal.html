@@ -1,0 +1,689 @@
+<html>
+
+<head>
+    <title>
+        snapdeal
+    </title>
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"-->
+    <link rel="stylesheet" href="./fa/css/all.min.css">
+    <script src="./fa/js/all.min.js"></script>
+    <style>
+        #main {
+            height: 100%;
+            width: 100%;
+            /*border: 2px solid brown;*/
+
+
+
+        }
+
+        #header {
+            display: flex;
+            height: 100px;
+            width: 100%;
+            /*  border: 1px solid red;*/
+            background-color: #e40046;
+            flex-direction: column;
+
+
+            position: fixeds;
+        }
+
+
+
+        #divh1 {
+            display: flex;
+
+            height: 28%;
+            width: 100%;
+            /*border: 1px solid black;*/
+            background-color: #c6003d;
+
+        }
+
+        #divh1l {
+            height: 100%;
+            width: 50%;
+            /* border: 1px solid black;*/
+            color: white;
+
+        }
+
+        #divh1r {
+            display: flex;
+            height: 100%;
+            width: 50%;
+            /*border: 1px solid black;*/
+            align-items: center;
+            flex-direction: row-reverse;
+        }
+
+        .h1buttons {
+            background: transparent;
+            border: none;
+            color: white;
+        }
+
+        #divh2 {
+            display: flex;
+            flex-grow: 1;
+            flex-shrink: 1;
+            /*border: 1px solid red;*/
+        }
+
+        #divh2-1 {
+            display: flex;
+            flex-grow: 1;
+            flex-shrink: 0;
+            justify-content: center;
+
+
+        }
+
+        #divh2-2 {
+            display: flex;
+            align-self: center;
+            flex-grow: 1;
+            flex-shrink: 1;
+            justify-content: center;
+
+
+        }
+
+        #ibox {
+            flex-grow: 1;
+            flex-shrink: 1;
+            width: 420px;
+            background: rgb(255, 255, 255);
+            border: none;
+            font-size: 17px;
+            color: #909090;
+            border-right: none;
+            height: 37px;
+            padding: 0 10px 0 32px;
+            outline: none;
+            text-overflow: ellipsis;
+            border-radius: 2px 0px 0px 2px;
+            font-family: "font-regular";
+        }
+
+        #sbtn {
+            flex-grow: 1;
+            flex-shrink: 1;
+            width: 100px;
+            position: relative;
+            top: 0;
+            background: #333;
+            color: #fff;
+            transition: all .2s ease-out;
+            height: 37px;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            line-height: 25px;
+            font-size: 14px;
+            border-radius: 0 3px 3px 0 !important;
+        }
+
+        #divh2-3 {
+            display: flex;
+            flex-grow: 1;
+            flex-shrink: 1;
+            display: flex;
+            align-items: center;
+
+            flex-direction: row-reverse;
+
+
+
+        }
+
+        #cart {
+            flex-grow: 0;
+            flex-shrink: 1;
+
+            font-size: 15px;
+            margin-right: 13px;
+            background: none;
+            border: none;
+            color: white;
+            font-family: sans-serif;
+
+        }
+
+        #signin {
+            width: 136px;
+            height: 53px;
+            flex-grow: 0;
+            flex-shrink: 1;
+
+            font-size: 15px;
+            margin-left: 13px;
+            margin-right: 70px;
+            background: none;
+            border: none;
+            color: white;
+            font-family: sans-serif;
+
+            
+            padding-top: 19px;
+            padding-left: 14px;
+            background-color: none;
+
+        }
+        #signin:hover{
+            background-color: #333333fc;
+        }
+
+        #signin-box {
+            position: absolute;
+            background-color: #333333fc;
+            
+            height: 291px;
+            width: 219px;
+            right: 78px;
+            top: 99px;
+            display: none;
+
+        }
+
+        #signin:hover #signin-box {
+           
+            display:block;
+        }
+
+        .signin-box-button {
+            cursor: pointer;
+            color: black;
+            
+            padding: 11px;
+            text-align: left;
+            font-size: 15px;
+            color: aliceblue;
+        }
+        .signin-box-button:hover{
+            background-color: #2a2828;
+
+        }
+
+        #signin-box-login {
+            
+            margin-top: 18px;
+            width: 100%;
+            margin-left: 11px;
+            height: 156px;
+
+        }
+
+        #img {
+            padding: 5%;
+            flex-grow: 0;
+            flex-shrink: 0;
+        }
+
+        #footer {
+            display: flex;
+            height: 866px;
+            flex-grow: 1;
+            width: 100%;
+            border: 1px solid red;
+        }
+
+
+        #flside {
+            display: flex;
+            height: 80%;
+            margin-left: 82px;
+
+            width: 16%;
+            /* border: 2px solid black;*/
+            flex-direction: column;
+
+
+        }
+
+        #flstop {
+            flex-grow: 1;
+            flex-shrink: 0;
+            overflow: hidden;
+
+            height: 41%;
+            width: 100%;
+            padding-left: 2px;
+
+        }
+
+        .fls-top-div {
+            padding-left: 3px;
+
+
+            background: none;
+            border: none;
+            font-family: sans-serif;
+            font-size: smaller;
+
+        }
+
+        .fls-top-div:hover {
+            border-left: 2px solid red;
+        }
+
+        .fls-div-top-img {
+            height: 22px;
+        }
+
+        #flsbottom {
+            flex-grow: 1;
+            flex-shrink: 0;
+
+            height: 60%;
+            width: 100%;
+
+
+        }
+
+        .fls-bottom-div {
+            padding-left: 3px;
+
+            background: none;
+            border: none;
+            font-family: sans-serif;
+
+            margin: 5px;
+
+            font-size: 12px;
+
+        }
+
+        .fls-bottom-div:hover {
+            border-left: 2px solid red;
+
+        }
+
+        #fcenter {
+
+            height: 80%;
+            width: 56%;
+            /*border: 2px solid black;*/
+            flex-grow: 1;
+            flex-shrink: 0;
+
+        }
+
+        #fctop {
+            display: flex;
+            height: 41%;
+            width: 100%;
+            /*border: 2px solid black;*/
+            flex-grow: 1;
+            flex-shrink: 0;
+            flex-direction: row;
+
+        }
+
+        #fctop-img {
+            height: 100%;
+            width: 68%;
+
+        }
+
+        #fctop-buttons-div {
+            display: flex;
+        }
+
+        .fctop-btn-div {
+            display: flex;
+            height: 22px;
+            margin-right: 10px;
+            margin-left: 7px;
+            font-family: sans-serif;
+            font-size: 12px;
+            color: #696565;
+            text-align: center;
+            margin-top: 2px;
+        }
+
+        .fctop-btn-div:hover {
+            border-bottom: 3px solid black;
+
+        }
+
+        .trending {
+            font-size: 11px;
+            font-family: sans-serif;
+            color: black;
+            text-decoration: none;
+
+        }
+
+        .trending-div {
+            margin-bottom: 3px;
+
+        }
+
+
+        #fcbottom {
+
+            width: 100%;
+            height: 58%;
+            border: 2px solid black;
+            flex-grow: 1;
+            flex-shrink: 0;
+        }
+
+        #frside {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            width: 25%;
+            /*border: 2px solid black;*/
+            flex-grow: 1;
+            flex-shrink: 0;
+            margin-left: 10px;
+        }
+
+        #frside-ibox-div {
+            /*border: 2px solid red;*/
+            width: 100%;
+            align-self: center;
+            margin-top: 9px;
+        }
+
+        #frside-ibox {
+            border-radius: 7px;
+            height: 30px;
+            border: none;
+            background: none;
+        }
+
+
+        #frside-button {
+            /*border: 2px solid red;*/
+            margin-top: 11px;
+        }
+
+        #frside-button-1 {
+            background-color: #333333;
+            border: none;
+            border-radius: 3px;
+            height: 33px;
+            width: 114px;
+            color: white;
+        }
+
+        #frside-button-2 {
+            height: 30px;
+            width: 76px;
+            border: none;
+            color: #333333;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="header">
+            <div id="divh1">
+                <div id="divh1l">
+                    india's fastest online shopping desitination
+
+
+                </div>
+                <div id="divh1r">
+                    <button type="submit" class="h1buttons">
+                        Download app
+
+                    </button>
+                    <button type="submit" class="h1buttons">
+                        sell on snapdeal
+
+                    </button>
+                    <button type="submit" class="h1buttons">
+                        help center
+
+                    </button>
+                    <button type="submit" class="h1buttons">
+                        Gift cards
+
+                    </button>
+
+
+                </div>
+
+
+            </div>
+            <div id="divh2">
+                <div id="divh2-1">
+                    <img src="https://i3.sdlcdn.com/img/snapdeal/darwin/logo/sdLatestLogo.svg" id="img"></img>
+                </div>
+                <div id="divh2-2">
+                    <input type="search" placeholder="search products & brands" id="ibox">
+                    </input>
+                    <button type="submit" id="sbtn">
+                        search
+
+                    </button>
+
+                </div>
+                <div id="divh2-3">
+                    <div id="signin">
+                        sign in <i class="fa fa-user-circle" aria-hidden="true"
+                            style="font-size: 22px;margin-left:21px;"></i>
+                        <div id="signin-box">
+                            <div id="signin-box-btns-div">
+                                <div class="signin-box-button" style="margin-top: 10px;">
+                                    <i class="fas fa-user"></i> Your Account
+                                </div>
+                                <div class="signin-box-button">
+                                    <i class="fa fa-archive" aria-hidden="true"></i> Your Orders
+                                </div>
+                                <div class="signin-box-button">
+                                    <i class="far fa-heart"></i> Shortlist
+                                </div>
+                                <div class="signin-box-button">
+                                    <i class="fas fa-hand-holding-heart" aria-hidden="true"></i> SD Cash
+                                </div>
+
+                                <hr style="border-color: aliceblue;border-bottom: 0px;
+                                opacity: 0.2;">
+                                <div
+                                    style="height: 16px;color: aliceblue;font-size: 15px;width: 100%;text-align:center">
+                                    if you are a new user
+                                </div>
+                                <div
+                                    style="height: 23px;color: aliceblue;font-size: 21px;width: 100%;text-align:center">
+                                    Register
+
+                                </div>
+                                <!-- <div id="signin-box-login">
+                                            <button style="height: 25px;width: 90%; background-color: #e40046;">
+                                                Login
+        
+                                            </button>
+                                        
+        
+                                        </div>-->
+                                <div id="signin-box-login">
+                                    <button style="border:1px solid #e40046;color: aliceblue;
+                                    height: 30px;width: 90%; background-color: #e40046;">Login</button>
+
+                                </div>
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <BUTTON id="cart">
+
+                        cart <i class="fa fa-shopping-cart" aria-hidden="true"
+                            style="font-size: 22px;margin-left:15px;"></i>
+
+                    </BUTTON>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+        <div id="footer">
+            <div id="flside">
+                <div id="flstop">
+                    <br>
+                    <div style="font-size: 11px;">
+                        TOP CATEGORIES</div><br>
+                    <div class="fls-top-div">
+                        <img src="https://n3.sdlcdn.com/imgs/d/h/3/Discount_Right_icon-f5105.png"
+                            class="fls-div-top-img"> All Offers
+
+                    </div><br>
+                    <div class="fls-top-div">
+                        <img src="https://i1.sdlcdn.com/img/leftnavicon09/30x30mobile2.png" class="fls-div-top-img">
+                        Mobile & Tablets
+
+                    </div><br>
+                    <div class="fls-top-div">
+                        <img src="https://n2.sdlcdn.com/imgs/d/2/c/Electronic-6212c.png" class="fls-div-top-img">
+                        Electronics
+                    </div><br>
+                    <div class="fls-top-div">
+                        <img src="https://n2.sdlcdn.com/imgs/d/2/c/ComputerGaming-a02cf.png"
+                            class="fls-div-top-img">Computer & Gamming
+                    </div><br>
+                    <div class="fls-top-div">
+                        <img src="https://n2.sdlcdn.com/imgs/c/0/x/Homekitchenfurnishing-3eda1.jpg"
+                            class="fls-div-top-img"> Home & kitchen
+                        <br>
+
+
+                    </div>
+                </div>
+                <div id="flsbottom">
+                    <div style="font-size: 11px;">MORE CATEGORY</div>
+                    <div class="fls-bottom-div" id="fls-bottom-div">
+                        Men's Fashion
+
+                    </div>
+                    <div class="fls-bottom-div">
+                        woman's Fashion
+
+                    </div>
+                    <div class="fls-bottom-div">
+                        toys, kids fashion & more
+                    </div>
+                    <div class="fls-bottom-div">
+                        Beuty,Helth & Daily Needs
+                    </div>
+                    <div class="fls-bottom-div">
+                        Sports,Fitness & outdoor
+                    </div>
+                    <div class="fls-bottom-div">
+                        cars & motorbike
+                    </div>
+                    <div class="fls-bottom-div">
+                        hobbies
+                    </div>
+                    <div class="fls-bottom-div">
+                        books, media & music
+                    </div>
+                    <a href="" style="text-decoration: none; color: black;">see all categories</a>
+                    <br>
+                    <br>
+                    <br>
+                    <div style="font-size: 11px; margin-bottom: 5px;">TRENDING SEARCHES</div>
+                    <div class="trending-div">
+                        <a class="trending" href=""><i class="fa fa-search" aria-hidden="true"></i>Kitchen Product</a>
+                    </div>
+                    <div class="trending-div">
+                        <a class="trending" href=""><i class="fa fa-search" aria-hidden="true"></i>Men Watch</a>
+                    </div>
+                    <div class="trending-div">
+                        <a class="trending" href=""><i class="fa fa-search" aria-hidden="true"></i>Bluetooth
+                            Earphone</a>
+                    </div>
+                    <div class="trending-div">
+                        <a class="trending" href=""><i class="fa fa-search" aria-hidden="true"></i>Tshirt Men</a>
+                    </div>
+                    <div class="trending-div">
+                        <a class="trending" href=""><i class="fa fa-search" aria-hidden="true"></i>Kurti womans</a>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+
+
+
+
+            <div id="fcenter">
+                <div id="fctop">
+                    <img src="./avengers4.jpg" id="fctop-img">
+                    <!--<div id="fctop-buttons-div">
+                        <div class="fctop-btn-div">
+                            Stay Safe & Use Mask
+                        </div>
+                        <div class="fctop-btn-div">
+                            Digital Gift Cards
+                        </div>
+
+                    </div>-->
+
+                    <div id="frside">
+                        <!-- <div>
+                            <img src="./location.png" style="height: 82px;margin-top: 37px;" alt="">
+                        </div>
+                        <div style="">
+                            your delivery pincode
+                        </div>-->
+                        <div
+                            style="border: 1px solid red; margin-top: 11px;   height: 116px;display: flex;align-self: center;">
+                            <img src="./location.png" style="height: 82px;margin-top: 25px;" alt="">
+                        </div>
+                        <div style="border: 1px solid red;       margin-top: 20px; height: 18px;display: flex;align-self: center;font-size: 10px;
+                        font-family: sans-serif;">
+                            your delivery pincode
+                        </div>
+                        <div style="border: 1px solid red;    height: 22px;display: flex;align-self: center;font-size: 10px;
+                        font-family: sans-serif;">
+                            Enter your pincode to Check<br>
+                            available and Faster Delivery Options
+                        </div>
+                        <div id="frside-ibox-div">
+
+                            <input id="frside-ibox" type="text" placeholder="Enter Pincode">
+                        </div>
+                        <div id="frside-button">
+                            <button type="submit" id="frside-button-1">
+                                submit
+
+                            </button>
+                            <button type="button" id="frside-button-2">
+                                Next
+
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div id="fcbottom">
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+</body>
+
+</html>
